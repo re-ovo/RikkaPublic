@@ -1,0 +1,162 @@
+information:
+  prefix: "&7[&3RikkaAC&7]&r "
+  displayname: "English (US)"
+  translators:
+    - "RE"
+console:
+  banner: "Version: {rikka_version} | Server: {server_version}"
+  lang_loaded: "English language has finished loading ({translators})"
+  build:
+    title: "(!) PLEASE NOTE! THIS IS A `{build_type}` Build!"
+    dev:
+      - "(!) For `internal testing` use only, please do not distribute publicly and use in production environment"
+    alpha:
+      - "(!) For early testing, please don't run it on a production server"
+      - "(!) If you find a bug, please report it~"
+    beta:
+      - "(!) There may be some unstable bugs, please use with care"
+      - "(!) If you find a bug, please report it~"
+
+  environment:
+    checking: "Checking server environment"
+    version_failed: "Rikka does not support your server version: {version}"
+    protocollib_failed: "Please install ProtocolLib: https://www.spigotmc.org/resources/protocollib.1997/"
+    cant_load: "RikkaAC can't run on your server, please contact author for support"
+  load:
+    command: "Registered commands"
+    listener: "Registered listeners"
+    task: "Registered tasks"
+    done: "Rikka Loaded~"
+  unload: "Unregistered all modules"
+
+command:
+  no_permission: "&cYou don't have permission to execute the command!"
+  not_exist: "&cCommand {command} does not exists!"
+  not_online: "&cThe player {player} is not online!"
+  input_player: "&cPlease input player name!"
+  only_for_player: "The command only can be used in game"
+  help:
+    title: "&fV: &3{version} &fS: &3{software} &fPage: &3{page}/{max_page}"
+    page_not_exist: "&cThat page is not exists!"
+    description: "Show command help"
+  reload:
+    description: "Reload the config"
+    complete: "&aReload Complete"
+  status:
+    arg: "[player]"
+    description: "View player status"
+    score: "&3Current score ({score}) &7| &3Ping: {ping} &7| &3Client: {client_version}"
+    header: "&a&lStatus of {player}"
+  spectate:
+    arg: "[player]"
+    description: "Spectate the player"
+    teleported: "You are spectating {player}"
+    exit: "You are out of spectator mode"
+    self: "You can't spectate your self :)"
+  reset:
+    arg: "[player]"
+    description: "Reset player data"
+    finish: "Reset data for {player}"
+  notify:
+    description: "Toggle notify message"
+    enable: "Enabled notify messages for you"
+    disable: "Disabled notify messages for you"
+  gui:
+    description: "Open management gui"
+  sync:
+    description: "Sync configuration to other servers"
+    not_support: "&cUnfortunately, your storage method does not support this feature! It's design for Bungee Network with mysql database!"
+    pushed: "The configuration file has been pushed to other servers(#{sync_id}), it may take a few seconds for a full sync to complete"
+    receive: "Received configuration file from cloud (#{sync_id})"
+
+notify:
+  status: "[Status]"
+  status_hover: "&7Click to view player status"
+  spectate: "[Spectate]"
+  spectate_hover: "&7Click to spectate player"
+
+info:
+  rikka_info_fine: "The player looks fine"
+
+  rikka_aura_flaw: "The player shows unreasonable flaws in combat"
+  rikka_aura_analyse: "There is a {value}% chance that the player is using aimbot"
+  rikka_aura_rotation: "The player's aiming speed is abnormal"
+  rikka_aura_heuristic: "The player's aiming pattern are similar to aimbot"
+
+  rikka_hitbox_miss: "The player attacks entities without looking at them"
+  rikka_hitbox_reach: "The player attacks {value} blocks further than normal"
+
+  rikka_click_cps: "The player clicks at an average of {cps} cps during combat"
+  rikka_click_variety: "The player's click interval is too constant"
+  rikka_click_noswing: "The player doesn't swing arm while attacking"
+  rikka_click_pattern: "The player's click pattern is suspected to be the autoclicker"
+
+  rikka_delay_break: "The player is breaking blocks {value}x faster than normal"
+  rikka_delay_place: "The player is placing blocks faster than expect"
+  rikka_delay_consume: "The player is consuming items too quickly"
+  rikka_delay_bow: "The player is pulling bow faster than normal"
+  rikka_delay_regen: "The player regen health too fast"
+
+  rikka_move_generic: "The player has moved {value} blocks/min incorrectly"
+  rikka_move_liquid: "The player has moved {value} blocks/min in liquid"
+  rikka_move_elytra: "The player has moved {value} blocks/min with elytra"
+  rikka_move_vehicle: "The player has moved {value} blocks/min in vehicle"
+  rikka_move_nofall: "The player is trying to avoid fall damage"
+  rikka_move_vel: "The player is trying to ignore velocity"
+  rikka_move_noslow: "The player is trying to ignore slow down"
+  rikka_move_timer: "This player speed up time to gain {value} ticks advantage than normal"
+
+  rikka_interact_visible: "The player attempts to interact with blocks that are not in view"
+  rikka_interact_rotation: "The player interacts with the block at an abnormal rotation"
+  rikka_interact_scaffold: "The player attempts to automatically bridge"
+
+  rikka_packets_spin: "The player is trying to spin himself like crazy"
+  rikka_packets_crash: "The player is trying to crash server with illegal packets"
+
+gui:
+  back_button:
+    name: "&c&lBack to main menu"
+    lore:
+      - ""
+      - "&aClick &fto return main menu"
+      - ""
+  main:
+    title: "RikkaAC GUI"
+    status:
+      name: "&a&lPlayer Status"
+      lore:
+        - "&aClick &fto view online player status"
+    information:
+      name: "&e&lInformation"
+      lore:
+        - "&3Rikka Information:"
+        - " &fVersion: &a{rikka_version}"
+        - " &fInternal Builds: &a#{rikka_builds}"
+        - " &fBuild Type: &a{rikka_type}"
+        - " &fNMS Implementation: &a{rikka_nms}"
+        - ""
+        - "&3Translation Information:"
+        - " &fName: &a{locale_displayname}"
+        - " &fTranslators: &a{locale_translators}"
+        - ""
+        - "&3Server Information:"
+        - " &fVersion: &a{server_version}"
+        - " &fBrand: &a{server_brand}"
+        - " &fTPS: &a{server_tps}"
+        - " &fRam: &a{server_ram}"
+        - " &fThreads: &a{server_threads}"
+        - " &fPlugins: &a{server_plugins}"
+        - " &fAntiCheats: &a{server_anticheats}"
+  status:
+    title: "Manager Players"
+    player:
+      name: "{score_color}{player}"
+      header:
+        - ""
+        - "&3Global Score: &f{score}"
+        - "&3Latency: &f{ping}"
+        - "&3Client: &f{client_version}"
+        - ""
+      footer:
+        - ""
+        - "&aClick &fto spectate the player"
